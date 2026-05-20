@@ -18,14 +18,13 @@ import dolphin from "./assets/education_logo/dolphin.png";
 import dav from "./assets/education_logo/dav.png";
 
 import sweetShopImage from "./assets/work_logo/project1.png";
-import aeroLinkImage from "./assets/work_logo/project2.png";
 import codeEditorImage from "./assets/work_logo/project3.png";
 
 export const profile = {
   name: "Shivansh Nayital",
-  role: "Frontend & Full Stack Developer",
+  role: "Full-Stack Developer",
   headline:
-    "Frontend & Full Stack Developer specializing in React, JavaScript, and modern web applications.",
+    "Full-Stack Developer specializing in React, JavaScript, and modern web applications.",
   location: "Mohali, India",
   phone: "+91 78762-39463",
   email: "shivanshnayitall@gmail.com",
@@ -110,8 +109,8 @@ export const education = [
     id: 0,
     img: culogo,
     school: "Chandigarh University, Mohali",
-    date: "Aug 2022 - Present",
-    grade: "In Progress",
+    date: "Aug 2022 – Jun 2026",
+    grade: "CGPA: 6.5",
     desc: "Pursuing core computer science coursework with a focus on programming, full stack web development, databases, software engineering, and modern application development.",
     degree: "Bachelor of Engineering in Computer Science",
   },
@@ -139,7 +138,7 @@ export const projects = [
   {
     id: 0,
     title: "Sweet Shop Management System",
-    period: "Present",
+    period: "Dec 2025 – Jan 2026",
     description:
       "A full-stack e-commerce and inventory management system built with Test-Driven Development, secure authentication, role-based access, and an admin-focused stock management workflow.",
     image: sweetShopImage,
@@ -157,21 +156,17 @@ export const projects = [
   },
   {
     id: 1,
-    title: "AeroLink",
-    period: "June 2024 - July 2024",
+    title: "Online Code Editor",
+    period: "Feb 2024 – May 2024",
     description:
-      "A MERN stack flight booking web application designed to streamline air travel reservations with secure traveler workflows, airline administration, and responsive user experience.",
-    image: aeroLinkImage,
-    tags: ["MongoDB", "Express.js", "React", "Node.js"],
+      "A real-time collaborative code editor built with React and Monaco Editor, supporting multiple users editing simultaneously with live WebSocket sync, multi-language syntax highlighting, and backend-powered code execution.",
+    image: codeEditorImage,
+    tags: ["React", "Monaco Editor", "Node.js", "WebSockets"],
     features: [
-      "Developed a full-stack flight booking web application using the MERN stack.",
-      "Streamlined reservations with a secure, scalable, and user-friendly interface.",
-      "Designed features for travelers and airline administrators to support booking, management, and monitoring.",
-      "Focused on personalization and performance for a smooth responsive user experience.",
-      "Engineered the platform for scalability, future expansion, and growing traffic needs.",
+      "Built an online code editor with real-time collaboration using WebSockets, allowing multiple users to edit code simultaneously.",
+      "Integrated backend with Node.js for user authentication, project saving, and code execution with multi-language syntax highlighting.",
     ],
     github: "https://github.com/Shivanshayital",
-    webapp: "https://github.com/Shivanshayital",
   },
   {
     id: 2,
@@ -228,8 +223,24 @@ export const experiences = [
 ];
 
 export const certifications = [
-  "Databases and SQL for Data Science - IBM",
-  "Introduction to Databases - META",
-  "React Native - META",
-  "Cybersecurity Attack and Defense Fundamentals - EC Council",
+  {
+    title: "Databases and SQL for Data Science – IBM",
+    description:
+      "Covers SQL querying, relational databases, and data analysis using real-world datasets.",
+  },
+  {
+    title: "Introduction to Databases – META",
+    description:
+      "Covers database design, data modeling, and foundational concepts for modern applications.",
+  },
+  {
+    title: "React Native – META",
+    description:
+      "Covers building cross-platform mobile applications using React Native and JavaScript.",
+  },
+  {
+    title: "Cybersecurity Attack and Defense Fundamentals – EC Council",
+    description:
+      "Covers core concepts of ethical hacking, threat analysis, and defense strategies.",
+  },
 ];

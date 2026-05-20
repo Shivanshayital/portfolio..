@@ -90,15 +90,17 @@ const Project = () => {
                   >
                     <FaGithub /> GitHub
                   </a>
-                  <a
-                    href={project.webapp}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onClick={(event) => event.stopPropagation()}
-                    className="inline-flex items-center gap-2 rounded-md bg-cyan-400 px-4 py-2 text-sm font-bold text-slate-950 transition hover:bg-cyan-300"
-                  >
-                    <FaExternalLinkAlt /> Live Demo
-                  </a>
+                  {project.webapp && (
+                    <a
+                      href={project.webapp}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={(event) => event.stopPropagation()}
+                      className="inline-flex items-center gap-2 rounded-md bg-cyan-400 px-4 py-2 text-sm font-bold text-slate-950 transition hover:bg-cyan-300"
+                    >
+                      <FaExternalLinkAlt /> Live Demo
+                    </a>
+                  )}
                 </div>
               </div>
             </MotionArticle>
@@ -176,14 +178,16 @@ const Project = () => {
                   >
                     <FaGithub /> View Code
                   </a>
-                  <a
-                    href={selectedProject.webapp}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 rounded-md bg-cyan-400 px-5 py-3 font-bold text-slate-950 transition hover:bg-cyan-300"
-                  >
-                    <FaExternalLinkAlt /> Live Demo
-                  </a>
+                  {selectedProject.webapp && (
+                    <a
+                      href={selectedProject.webapp}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 rounded-md bg-cyan-400 px-5 py-3 font-bold text-slate-950 transition hover:bg-cyan-300"
+                    >
+                      <FaExternalLinkAlt /> Live Demo
+                    </a>
+                  )}
                 </div>
               </div>
             </div>

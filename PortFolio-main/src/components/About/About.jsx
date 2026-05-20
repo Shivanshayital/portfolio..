@@ -39,12 +39,10 @@ const About = () => {
               words={[
                 "React Developer",
                 "JavaScript Developer",
-                "Frontend Engineer",
-                "Full Stack Fresher",
+                "Full-Stack Developer",
               ]}
               loop={0}
-              cursor
-              cursorStyle="|"
+              cursor={false}
               typeSpeed={70}
               deleteSpeed={35}
               delaySpeed={1400}

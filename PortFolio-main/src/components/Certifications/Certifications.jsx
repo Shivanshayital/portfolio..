@@ -34,7 +34,7 @@ const Certifications = () => {
         <div className="grid gap-4 md:grid-cols-2">
           {certifications.map((certification, index) => (
             <MotionArticle
-              key={certification}
+              key={certification.title}
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -45,9 +45,9 @@ const Certifications = () => {
                 <FaAward />
               </span>
               <div>
-                <h3 className="text-lg font-bold text-white">{certification}</h3>
+                <h3 className="text-lg font-bold text-white">{certification.title}</h3>
                 <p className="mt-2 text-sm text-slate-400">
-                  Adds practical depth to software development, data handling, and secure application thinking.
+                  {certification.description}
                 </p>
               </div>
             </MotionArticle>
