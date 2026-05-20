@@ -20,7 +20,6 @@ import dav from "./assets/education_logo/dav.png";
 import sweetShopImage from "./assets/work_logo/project1.png";
 import aeroLinkImage from "./assets/work_logo/project2.png";
 import codeEditorImage from "./assets/work_logo/project3.png";
-import projectFourImage from "./assets/work_logo/project4.png";
 
 export const profile = {
   name: "Shivansh Nayital",
@@ -178,36 +177,6 @@ export const projects = [
       "Implemented validation checks for identity-data consistency.",
       "Built a Flask-backed workflow for reviewing fraud indicators.",
       "Focused on explainable outputs for practical decision making.",
-    ],
-    github: "https://github.com/Shivanshayital",
-    webapp: "https://github.com/Shivanshayital",
-  },
-  {
-    id: 3,
-    title: "Sweet Shop Management System",
-    description:
-      "Full-stack inventory and sales management platform with product CRUD, search, authentication, and admin workflows for a small business use case.",
-    image: projectFourImage,
-    tags: ["React", "Node.js", "PostgreSQL", "JWT", "REST API"],
-    features: [
-      "Designed admin-friendly product and inventory management screens.",
-      "Added authentication and protected backend routes.",
-      "Modeled database tables for orders, products, and stock movement.",
-    ],
-    github: "https://github.com/Shivanshayital",
-    webapp: "https://github.com/Shivanshayital",
-  },
-  {
-    id: 4,
-    title: "Online Code Editor",
-    description:
-      "Responsive web-based coding workspace concept with syntax-focused UI, project saving flow, and collaboration-ready architecture.",
-    image: codeEditorImage,
-    tags: ["React", "JavaScript", "Node.js", "WebSockets"],
-    features: [
-      "Created editor-first UI for writing and organizing code snippets.",
-      "Planned real-time collaboration through socket-based communication.",
-      "Focused on responsive layouts for desktop and tablet usage.",
     ],
     github: "https://github.com/Shivanshayital",
     webapp: "https://github.com/Shivanshayital",
