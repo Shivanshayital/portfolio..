@@ -175,21 +175,22 @@ export const projects = [
   },
   {
     id: 2,
-    title: "Online Code Editor",
-    period: "Feb. 2024 - May 2024",
+    title: "Team Task Manager",
+    period: "Full Stack Project",
     description:
-      "A real-time collaborative online code editor built with React, Monaco Editor, Node.js, and WebSockets for synchronized multi-user coding sessions.",
+      "A complete full-stack team project and task management application with JWT authentication, role-based access, dashboards, project workflows, and task tracking.",
     image: codeEditorImage,
-    tags: ["React", "Monaco Editor", "Node.js", "WebSockets"],
+    tags: ["React", "Vite", "Node.js", "Express.js", "MongoDB", "JWT"],
     features: [
-      "Developed a user-friendly coding interface using React and Monaco Editor.",
-      "Implemented real-time collaboration so multiple users can edit code simultaneously.",
-      "Integrated Node.js backend support for authentication, project saving, and code snippet execution.",
-      "Used WebSockets for live updates and seamless session synchronization.",
-      "Supported multiple programming languages with syntax highlighting and customizable themes.",
+      "Built JWT-based signup and login with bcrypt password hashing and protected frontend routes.",
+      "Implemented Admin and Member roles for managing projects, tasks, assignments, and team members.",
+      "Created project workflows for creating, editing, deleting, viewing, and assigning members.",
+      "Developed task management with priority levels, deadlines, status updates, and assignment tracking.",
+      "Designed dashboard summaries for total, pending, in-progress, completed, overdue, recent projects, and recent tasks.",
+      "Structured REST APIs across auth, projects, and tasks with MongoDB models for users, projects, and tasks.",
     ],
     github: "https://github.com/Shivanshayital",
-    webapp: "https://github.com/Shivanshayital",
+    webapp: "https://team-task-manager-production-e214.up.railway.app",
   },
 ];
 
