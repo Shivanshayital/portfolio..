@@ -51,7 +51,14 @@ const Project = () => {
                 />
               </div>
               <div className="flex flex-1 flex-col p-6 pt-2">
-                <h3 className="text-2xl font-bold text-white">{project.title}</h3>
+                <div className="flex flex-wrap items-start justify-between gap-3">
+                  <h3 className="text-2xl font-bold text-white">{project.title}</h3>
+                  {project.period && (
+                    <span className="rounded-full border border-slate-700 px-3 py-1 text-xs font-semibold text-slate-300">
+                      {project.period}
+                    </span>
+                  )}
+                </div>
                 <p className="mt-3 flex-1 text-sm leading-7 text-slate-400">
                   {project.description}
                 </p>
@@ -131,6 +138,11 @@ const Project = () => {
                 <h3 className="text-3xl font-extrabold text-white">
                   {selectedProject.title}
                 </h3>
+                {selectedProject.period && (
+                  <p className="mt-2 text-sm font-semibold text-cyan-200">
+                    {selectedProject.period}
+                  </p>
+                )}
                 <p className="mt-4 leading-8 text-slate-300">
                   {selectedProject.description}
                 </p>
