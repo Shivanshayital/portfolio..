@@ -20,67 +20,88 @@ import dav from "./assets/education_logo/dav.png";
 import sweetShopImage from "./assets/work_logo/project1.png";
 import aeroLinkImage from "./assets/work_logo/project2.png";
 import codeEditorImage from "./assets/work_logo/project3.png";
+import projectFourImage from "./assets/work_logo/project4.png";
 
 export const profile = {
   name: "Shivansh Nayital",
-  role: "Computer Science Engineering Student | Full Stack Developer",
+  role: "Frontend & Full Stack Developer",
+  headline:
+    "Frontend & Full Stack Developer specializing in React, JavaScript, and modern web applications.",
   location: "Mohali, India",
   phone: "+91 78762-39463",
   email: "shivanshnayitall@gmail.com",
   linkedin: "https://www.linkedin.com/in/shivansh-nayital",
-  github: "https://github.com/",
+  github: "https://github.com/Shivanshayital",
+  resume: "/resume.pdf",
 };
 
 export const aboutText =
-  "I am a Computer Science Engineering student passionate about full stack development, MERN stack applications, AI-driven projects, and practical problem-solving. I enjoy building scalable web applications, designing clean software systems, and exploring modern technologies that turn ideas into reliable user experiences. My focus is on writing maintainable code, learning quickly, and contributing to products that solve real problems.";
+  "I am a Computer Science Engineering student building recruiter-ready frontend and full stack projects with React, JavaScript, PHP, Flask, databases, and clean UI engineering. I enjoy turning academic and research ideas into usable products with responsive interfaces, reliable APIs, and practical problem-solving.";
 
 export const highlights = [
-  "MERN Stack Development",
-  "AI and Software Projects",
-  "REST APIs and Authentication",
-  "Scalable Web Applications",
+  "React Frontend Development",
+  "Full Stack Web Apps",
+  "REST APIs and Databases",
+  "Research-Based Problem Solving",
 ];
 
 export const SkillsInfo = [
   {
-    title: "Languages",
+    title: "Frontend",
+    summary: "Modern, responsive interfaces with reusable components.",
+    skills: [
+      { name: "React", logo: reactjsLogo },
+      { name: "JavaScript", logo: javascriptLogo },
+      { name: "TypeScript", logo: typescriptLogo },
+      { name: "Tailwind CSS" },
+      { name: "HTML5" },
+      { name: "CSS3" },
+    ],
+  },
+  {
+    title: "Backend",
+    summary: "APIs, server-side logic, authentication, and integrations.",
+    skills: [
+      { name: "Node.js", logo: nodejsLogo },
+      { name: "Express.js", logo: expressjsLogo },
+      { name: "Flask", logo: pythonLogo },
+      { name: "PHP" },
+      { name: "REST APIs" },
+      { name: "JWT Auth" },
+    ],
+  },
+  {
+    title: "Database",
+    summary: "Relational and document database design for app workflows.",
+    skills: [
+      { name: "MySQL", logo: mysqlLogo },
+      { name: "MongoDB", logo: mongodbLogo },
+      { name: "PostgreSQL", logo: postgreLogo },
+      { name: "SQL", logo: mysqlLogo },
+    ],
+  },
+  {
+    title: "Tools",
+    summary: "Daily developer workflow, testing, deployment, and collaboration.",
+    skills: [
+      { name: "Git", logo: gitLogo },
+      { name: "GitHub", logo: githubLogo },
+      { name: "VS Code", logo: vscodeLogo },
+      { name: "Postman" },
+      { name: "Vercel" },
+      { name: "Figma" },
+    ],
+  },
+  {
+    title: "Programming Languages",
+    summary: "Core problem-solving and implementation languages.",
     skills: [
       { name: "C++", logo: cppLogo },
       { name: "Python", logo: pythonLogo },
       { name: "Java", logo: javaLogo },
       { name: "JavaScript", logo: javascriptLogo },
-      { name: "TypeScript", logo: typescriptLogo },
+      { name: "PHP" },
       { name: "SQL", logo: mysqlLogo },
-    ],
-  },
-  {
-    title: "Frameworks & Tools",
-    skills: [
-      { name: "React", logo: reactjsLogo },
-      { name: "Node.js", logo: nodejsLogo },
-      { name: "Express.js", logo: expressjsLogo },
-      { name: "MongoDB", logo: mongodbLogo },
-      { name: "PostgreSQL", logo: postgreLogo },
-      { name: "TensorFlow" },
-      { name: "Arduino" },
-    ],
-  },
-  {
-    title: "Developer Tools",
-    skills: [
-      { name: "Git", logo: gitLogo },
-      { name: "GitHub", logo: githubLogo },
-      { name: "AWS" },
-      { name: "VS Code", logo: vscodeLogo },
-      { name: "Canva" },
-    ],
-  },
-  {
-    title: "Soft Skills",
-    skills: [
-      { name: "Team Collaboration" },
-      { name: "Leadership" },
-      { name: "Problem-Solving" },
     ],
   },
 ];
@@ -118,33 +139,111 @@ export const education = [
 export const projects = [
   {
     id: 0,
-    title: "Sweet Shop Management System",
+    title: "AI Drug Discovery Project",
     description:
-      "A full-stack e-commerce and inventory management platform built with TDD, JWT authentication, role-based access, REST APIs, PostgreSQL schema design, search functionality, and an admin dashboard for CRUD operations.",
+      "Research-oriented machine learning project exploring drug discovery workflows, molecular data analysis, and prediction-focused experimentation for healthcare problem solving.",
     image: sweetShopImage,
-    tags: ["TypeScript", "Node.js", "React", "PostgreSQL", "JWT", "Jest"],
-    github: "https://github.com/",
-    webapp: "#",
+    tags: ["Python", "Machine Learning", "Data Analysis", "Research"],
+    features: [
+      "Built a structured workflow for analyzing drug-related datasets.",
+      "Applied model experimentation for prediction and decision support.",
+      "Documented research findings with a problem-solving-first approach.",
+    ],
+    github: "https://github.com/Shivanshayital",
+    webapp: "https://github.com/Shivanshayital",
   },
   {
     id: 1,
-    title: "AeroLink",
+    title: "Team Task Manager",
     description:
-      "A secure and scalable MERN flight booking web application with traveler workflows, airline administrator features, responsive UI, and an architecture designed for future product growth.",
+      "Collaborative task management web app designed for team workflows, task ownership, progress tracking, and clean dashboard-style project organization.",
     image: aeroLinkImage,
-    tags: ["MongoDB", "Express.js", "React", "Node.js"],
-    github: "https://github.com/",
-    webapp: "#",
+    tags: ["React", "Node.js", "Express.js", "MongoDB", "REST API"],
+    features: [
+      "Created task boards for assignment, status updates, and priority tracking.",
+      "Designed responsive interfaces for repeated day-to-day project use.",
+      "Structured backend APIs for team, task, and collaboration workflows.",
+    ],
+    github: "https://github.com/Shivanshayital",
+    webapp: "https://github.com/Shivanshayital",
   },
   {
     id: 2,
+    title: "PAN Card Fraud Detection System",
+    description:
+      "Fraud detection system focused on identifying suspicious PAN card records through validation logic, data checks, and web-based review workflows.",
+    image: codeEditorImage,
+    tags: ["Python", "Flask", "Machine Learning", "MySQL", "HTML/CSS"],
+    features: [
+      "Implemented validation checks for identity-data consistency.",
+      "Built a Flask-backed workflow for reviewing fraud indicators.",
+      "Focused on explainable outputs for practical decision making.",
+    ],
+    github: "https://github.com/Shivanshayital",
+    webapp: "https://github.com/Shivanshayital",
+  },
+  {
+    id: 3,
+    title: "Sweet Shop Management System",
+    description:
+      "Full-stack inventory and sales management platform with product CRUD, search, authentication, and admin workflows for a small business use case.",
+    image: projectFourImage,
+    tags: ["React", "Node.js", "PostgreSQL", "JWT", "REST API"],
+    features: [
+      "Designed admin-friendly product and inventory management screens.",
+      "Added authentication and protected backend routes.",
+      "Modeled database tables for orders, products, and stock movement.",
+    ],
+    github: "https://github.com/Shivanshayital",
+    webapp: "https://github.com/Shivanshayital",
+  },
+  {
+    id: 4,
     title: "Online Code Editor",
     description:
-      "A collaborative online code editor with real-time synchronization through WebSockets, Monaco Editor integration, authentication support, project saving, and multi-language syntax highlighting.",
+      "Responsive web-based coding workspace concept with syntax-focused UI, project saving flow, and collaboration-ready architecture.",
     image: codeEditorImage,
-    tags: ["React", "Monaco Editor", "Node.js", "WebSockets"],
-    github: "https://github.com/",
-    webapp: "#",
+    tags: ["React", "JavaScript", "Node.js", "WebSockets"],
+    features: [
+      "Created editor-first UI for writing and organizing code snippets.",
+      "Planned real-time collaboration through socket-based communication.",
+      "Focused on responsive layouts for desktop and tablet usage.",
+    ],
+    github: "https://github.com/Shivanshayital",
+    webapp: "https://github.com/Shivanshayital",
+  },
+];
+
+export const experiences = [
+  {
+    title: "Academic Projects",
+    period: "2022 - Present",
+    description:
+      "Built full stack and research-based projects through computer science coursework, converting problem statements into working web applications and documented technical solutions.",
+    points: [
+      "Worked across frontend UI, backend APIs, database design, and deployment-ready project structure.",
+      "Practiced clean component design, responsive layouts, and practical feature planning.",
+    ],
+  },
+  {
+    title: "Team Collaboration Experience",
+    period: "Project Teams",
+    description:
+      "Collaborated in student project teams to divide work, review implementation choices, debug issues, and present working outcomes.",
+    points: [
+      "Coordinated tasks around frontend screens, API flows, documentation, and testing.",
+      "Used GitHub-style workflows and clear communication to keep project progress organized.",
+    ],
+  },
+  {
+    title: "Hackathons & Research Work",
+    period: "Problem Solving",
+    description:
+      "Explored AI, fraud detection, and practical software ideas with a research mindset focused on measurable problems and user-facing outcomes.",
+    points: [
+      "Investigated datasets, validation rules, and model behavior for decision-support projects.",
+      "Presented solutions with emphasis on clarity, feasibility, and real-world usefulness.",
+    ],
   },
 ];
 

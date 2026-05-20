@@ -3,7 +3,7 @@ import emailjs from "@emailjs/browser";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { motion } from "framer-motion";
-import { FaEnvelope, FaLinkedin, FaMapMarkerAlt, FaPhone } from "react-icons/fa";
+import { FaEnvelope, FaGithub, FaLinkedin, FaMapMarkerAlt, FaPhone } from "react-icons/fa";
 import { profile } from "../../constants";
 
 const MotionDiv = motion.div;
@@ -92,6 +92,15 @@ const Contact = () => {
               <FaLinkedin className="text-cyan-300" />
               <span>linkedin.com/in/shivansh-nayital</span>
             </a>
+            <a
+              href={profile.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-4 rounded-lg border border-slate-800 bg-slate-900/75 p-4 transition hover:border-cyan-300/70"
+            >
+              <FaGithub className="text-cyan-300" />
+              <span>github.com/Shivanshayital</span>
+            </a>
             <div className="flex items-center gap-4 rounded-lg border border-slate-800 bg-slate-900/75 p-4">
               <FaMapMarkerAlt className="text-cyan-300" />
               <span>{profile.location}</span>
@@ -112,6 +121,7 @@ const Contact = () => {
               name="user_name"
               placeholder="Your name"
               required
+              minLength="2"
               className="w-full rounded-md border border-slate-700 bg-slate-950 p-4 text-white outline-none transition placeholder:text-slate-500 focus:border-cyan-300"
             />
             <input
@@ -119,6 +129,7 @@ const Contact = () => {
               name="user_email"
               placeholder="Your email"
               required
+              pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$"
               className="w-full rounded-md border border-slate-700 bg-slate-950 p-4 text-white outline-none transition placeholder:text-slate-500 focus:border-cyan-300"
             />
             <input
@@ -126,6 +137,7 @@ const Contact = () => {
               name="subject"
               placeholder="Subject"
               required
+              minLength="3"
               className="w-full rounded-md border border-slate-700 bg-slate-950 p-4 text-white outline-none transition placeholder:text-slate-500 focus:border-cyan-300"
             />
             <textarea
@@ -133,6 +145,7 @@ const Contact = () => {
               placeholder="Message"
               rows="5"
               required
+              minLength="10"
               className="w-full resize-none rounded-md border border-slate-700 bg-slate-950 p-4 text-white outline-none transition placeholder:text-slate-500 focus:border-cyan-300"
             />
             <button

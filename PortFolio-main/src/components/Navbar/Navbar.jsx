@@ -7,6 +7,7 @@ const menuItems = [
   { id: "about", label: "About" },
   { id: "skills", label: "Skills" },
   { id: "work", label: "Projects" },
+  { id: "experience", label: "Experience" },
   { id: "education", label: "Education" },
   { id: "certifications", label: "Certifications" },
   { id: "contact", label: "Contact" },
@@ -55,7 +56,7 @@ const Navbar = () => {
           <span className="text-cyan-300"> /&gt;</span>
         </button>
 
-        <ul className="hidden items-center gap-6 text-sm font-semibold text-slate-300 lg:flex">
+        <ul className="hidden items-center gap-5 text-sm font-semibold text-slate-300 lg:flex">
           {menuItems.map((item) => (
             <li key={item.id}>
               <button

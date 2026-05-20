@@ -31,7 +31,7 @@ const Project = () => {
           </p>
         </MotionDiv>
 
-        <div className="grid gap-6 lg:grid-cols-3">
+        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
           {projects.map((project, index) => (
             <MotionArticle
               key={project.id}
@@ -46,6 +46,7 @@ const Project = () => {
                 <img
                   src={project.image}
                   alt={project.title}
+                  loading="lazy"
                   className="h-48 w-full rounded-md object-cover"
                 />
               </div>
@@ -54,6 +55,14 @@ const Project = () => {
                 <p className="mt-3 flex-1 text-sm leading-7 text-slate-400">
                   {project.description}
                 </p>
+                <ul className="mt-5 space-y-2">
+                  {project.features.slice(0, 2).map((feature) => (
+                    <li key={feature} className="flex gap-2 text-sm leading-6 text-slate-300">
+                      <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-300" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
                 <div className="mt-5 flex flex-wrap gap-2">
                   {project.tags.map((tag) => (
                     <span
@@ -63,6 +72,26 @@ const Project = () => {
                       {tag}
                     </span>
                   ))}
+                </div>
+                <div className="mt-6 flex flex-wrap gap-3">
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={(event) => event.stopPropagation()}
+                    className="inline-flex items-center gap-2 rounded-md border border-slate-700 px-4 py-2 text-sm font-semibold text-slate-100 transition hover:border-emerald-300 hover:text-emerald-200"
+                  >
+                    <FaGithub /> GitHub
+                  </a>
+                  <a
+                    href={project.webapp}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={(event) => event.stopPropagation()}
+                    className="inline-flex items-center gap-2 rounded-md bg-cyan-400 px-4 py-2 text-sm font-bold text-slate-950 transition hover:bg-cyan-300"
+                  >
+                    <FaExternalLinkAlt /> Live Demo
+                  </a>
                 </div>
               </div>
             </MotionArticle>
@@ -95,6 +124,7 @@ const Project = () => {
               <img
                 src={selectedProject.image}
                 alt={selectedProject.title}
+                loading="lazy"
                 className="h-full min-h-72 w-full rounded-md object-cover"
               />
               <div>
@@ -114,6 +144,17 @@ const Project = () => {
                     </span>
                   ))}
                 </div>
+                <div className="mt-7">
+                  <h4 className="font-bold text-slate-100">Key Features</h4>
+                  <ul className="mt-3 space-y-3">
+                    {selectedProject.features.map((feature) => (
+                      <li key={feature} className="flex gap-3 leading-7 text-slate-300">
+                        <span className="mt-3 h-2 w-2 shrink-0 rounded-full bg-emerald-300" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
                 <div className="mt-8 flex flex-wrap gap-3">
                   <a
                     href={selectedProject.github}
@@ -123,16 +164,14 @@ const Project = () => {
                   >
                     <FaGithub /> View Code
                   </a>
-                  {selectedProject.webapp !== "#" && (
-                    <a
-                      href={selectedProject.webapp}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 rounded-md bg-cyan-400 px-5 py-3 font-bold text-slate-950 transition hover:bg-cyan-300"
-                    >
-                      <FaExternalLinkAlt /> Live Demo
-                    </a>
-                  )}
+                  <a
+                    href={selectedProject.webapp}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 rounded-md bg-cyan-400 px-5 py-3 font-bold text-slate-950 transition hover:bg-cyan-300"
+                  >
+                    <FaExternalLinkAlt /> Live Demo
+                  </a>
                 </div>
               </div>
             </div>

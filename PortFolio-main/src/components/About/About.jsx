@@ -2,7 +2,7 @@ import React from "react";
 import Tilt from "react-parallax-tilt";
 import { motion } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
-import { FaEnvelope, FaGithub, FaLinkedin, FaMapMarkerAlt, FaPhone } from "react-icons/fa";
+import { FaDownload, FaEnvelope, FaGithub, FaLinkedin, FaMapMarkerAlt, FaPhone } from "react-icons/fa";
 import { aboutText, highlights, profile } from "../../constants";
 import profileImage from "../../assets/MYPHOTO.jpg";
 
@@ -31,13 +31,16 @@ const About = () => {
           <h1 className="text-4xl font-extrabold leading-tight sm:text-5xl lg:text-6xl">
             Hi, I am <span className="text-cyan-300">{profile.name}</span>
           </h1>
-          <p className="mt-5 text-xl font-semibold text-slate-200 sm:text-2xl">
+          <p className="mt-5 text-2xl font-bold leading-snug text-slate-100 sm:text-3xl">
+            {profile.headline}
+          </p>
+          <p className="mt-4 text-base font-semibold text-cyan-200 sm:text-lg">
             <Typewriter
               words={[
-                "Full Stack Developer",
-                "MERN Stack Builder",
-                "Computer Science Engineering Student",
-                "AI Project Enthusiast",
+                "React Developer",
+                "JavaScript Developer",
+                "Frontend Engineer",
+                "Full Stack Fresher",
               ]}
               loop={0}
               cursor
@@ -64,8 +67,15 @@ const About = () => {
 
           <div className="mt-8 flex flex-wrap justify-center gap-4 lg:justify-start">
             <a
+              href={profile.resume}
+              download
+              className="inline-flex items-center gap-2 rounded-md bg-emerald-300 px-5 py-3 font-bold text-slate-950 transition hover:-translate-y-0.5 hover:bg-emerald-200"
+            >
+              <FaDownload /> Resume
+            </a>
+            <a
               href={`mailto:${profile.email}`}
-              className="inline-flex items-center gap-2 rounded-md bg-cyan-400 px-5 py-3 font-bold text-slate-950 transition hover:bg-cyan-300"
+              className="inline-flex items-center gap-2 rounded-md bg-cyan-400 px-5 py-3 font-bold text-slate-950 transition hover:-translate-y-0.5 hover:bg-cyan-300"
             >
               <FaEnvelope /> Contact Me
             </a>
@@ -73,7 +83,7 @@ const About = () => {
               href={profile.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-md border border-slate-500 px-5 py-3 font-semibold text-slate-100 transition hover:border-cyan-300 hover:text-cyan-200"
+              className="inline-flex items-center gap-2 rounded-md border border-slate-500 px-5 py-3 font-semibold text-slate-100 transition hover:-translate-y-0.5 hover:border-cyan-300 hover:text-cyan-200"
             >
               <FaLinkedin /> LinkedIn
             </a>
@@ -81,7 +91,7 @@ const About = () => {
               href={profile.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-md border border-slate-500 px-5 py-3 font-semibold text-slate-100 transition hover:border-emerald-300 hover:text-emerald-200"
+              className="inline-flex items-center gap-2 rounded-md border border-slate-500 px-5 py-3 font-semibold text-slate-100 transition hover:-translate-y-0.5 hover:border-emerald-300 hover:text-emerald-200"
             >
               <FaGithub /> GitHub
             </a>
@@ -111,6 +121,7 @@ const About = () => {
               <img
                 src={profileImage}
                 alt={profile.name}
+                fetchPriority="high"
                 className="aspect-square w-full rounded-md object-cover"
               />
               <div className="mt-4 rounded-md bg-slate-950/70 p-4 text-left">

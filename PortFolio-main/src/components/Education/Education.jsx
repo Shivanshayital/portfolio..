@@ -45,6 +45,7 @@ const Education = () => {
                   <img
                     src={edu.img}
                     alt={edu.school}
+                    loading="lazy"
                     className="h-7 w-7 rounded-full object-cover"
                   />
                 </div>

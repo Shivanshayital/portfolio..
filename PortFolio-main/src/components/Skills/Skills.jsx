@@ -28,7 +28,7 @@ const Skills = () => {
           </p>
         </MotionDiv>
 
-        <div className="grid gap-5 md:grid-cols-2">
+        <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
           {SkillsInfo.map((category, index) => (
             <MotionDiv
               key={category.title}
@@ -36,9 +36,10 @@ const Skills = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.08 }}
               viewport={{ once: true, amount: 0.25 }}
-              className="rounded-lg border border-slate-800 bg-slate-900/75 p-6 shadow-xl shadow-slate-950/30"
+              className="rounded-lg border border-slate-800 bg-slate-900/75 p-6 shadow-xl shadow-slate-950/30 transition hover:-translate-y-1 hover:border-cyan-300/60"
             >
               <h3 className="text-xl font-bold text-slate-100">{category.title}</h3>
+              <p className="mt-2 min-h-12 text-sm leading-6 text-slate-400">{category.summary}</p>
               <div className="mt-5 grid grid-cols-2 gap-3 sm:grid-cols-3">
                 {category.skills.map((skill) => (
                   <div
@@ -50,6 +51,7 @@ const Skills = () => {
                         <img
                           src={skill.logo}
                           alt={`${skill.name} logo`}
+                          loading="lazy"
                           className="max-h-full max-w-full object-contain"
                         />
                       ) : (
