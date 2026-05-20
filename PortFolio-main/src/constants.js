@@ -31,7 +31,7 @@ export const profile = {
   email: "shivanshnayitall@gmail.com",
   linkedin: "https://www.linkedin.com/in/shivansh-nayital",
   github: "https://github.com/Shivanshayital",
-  resume: "/resume.pdf",
+  resume: "/Shivansh_Nayital_Resume.pdf",
 };
 
 export const aboutText =
